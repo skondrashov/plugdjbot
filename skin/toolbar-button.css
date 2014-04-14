@@ -1,0 +1,10 @@
+
+/*  skin/toolbar-button.css  */
+
+#plugdjbot-button {
+  list-style-image: url("chrome://plugdjbot/skin/btn_large.png");
+}
+
+toolbar[iconsize="small"] #plugdjbot-button {
+  list-style-image: url("chrome://plugdjbot/skin/btn_small.png");
+}

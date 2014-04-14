@@ -1,0 +1,6 @@
+content	plugdjbot				content/
+skin	plugdjbot	classic/1.0	skin/
+locale	plugdjbot	en-US		locale/en-US/
+
+overlay	chrome://browser/content/browser.xul			chrome://plugdjbot/content/browserOverlay.xul
+style	chrome://global/content/customizeToolbar.xul	chrome://plugdjbot/skin/toolbar-button.css

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css" ?>
+
+<prefwindow id="plugdjbot-prefs"
+	title="Kuralesache's Plug.DJ Bot Options"
+	buttonalign="start"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<preferences>
+		<preference id="plugdjbot-no-repeat-pref" name="extensions.plugdjbot.noRepeatNumber" type="int" />
+		<preference id="plugdjbot-max-duration-pref" name="extensions.plugdjbot.maxDuration" type="int" />
+		<preference id="plugdjbot-void-filler-pref" name="extensions.plugdjbot.useVoidFiller" type="bool" />
+		<preference id="plugdjbot-erase-chat-links-pref" name="extensions.plugdjbot.eraseChatLinks" type="bool" />
+		<preference id="plugdjbot-enforce-blacklist-pref" name="extensions.plugdjbot.enforceBlacklist" type="bool" />
+	</preferences>
+
+	<grid>
+		<columns>
+			<column/>
+			<column align="end"/>
+		</columns>
+		<rows>
+			<row>
+				<label value="How far back should the bot check for repeats? Enter 0 if you don't want to block users from repeating songs." />
+				<textbox preference="plugdjbot-no-repeat-pref" type="number" />
+			</row>
+			<row>
+				<label value="What is the maximum song length that should be allowed, in seconds? Enter 0 if you do not want to check song length." />
+				<textbox preference="plugdjbot-max-duration-pref" type="number" />
+			</row>
+			<row>
+				<label value="Should you automatically start playing if the last DJ leaves the booth? This will keep the room from ever going quiet." />
+				<checkbox preference="plugdjbot-void-filler-pref" type="bool" />
+			</row>
+			<row>
+				<label value="Should messages containing links be automatically deleted?" />
+				<checkbox preference="plugdjbot-erase-chat-links-pref" type="bool" />
+			</row>
+			<row>
+				<label value="Should songs in the blacklist be automatically skipped?" />
+				<checkbox preference="plugdjbot-enforce-blacklist-pref" type="bool" />
+			</row>
+		</rows>
+	</grid>
+
+</prefwindow>

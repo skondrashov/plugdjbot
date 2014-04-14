@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css" ?>
+<?xml-stylesheet href="chrome://plugdjbot/skin/toolbar-button.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://plugdjbot/locale/browserOverlay.dtd">
+
+<overlay id="plugdjbot-browser-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript"
+    src="chrome://plugdjbot/content/browserOverlay.js" />
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="plugdjbot-string-bundle"
+      src="chrome://plugdjbot/locale/browserOverlay.properties" />
+  </stringbundleset>
+  
+  <toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton id="plugdjbot-button" class="toolbarbutton-1"
+      label="&plugdjbot.toolbarbutton.label;"
+      tooltiptext="&plugdjbot.toolbarbutton.tooltip;"
+	  type="menu">
+	    <menupopup>
+		  <menuitem label="Start" oncommand="PlugDJBot.init();" />
+		  <menuitem label="Stop" oncommand="PlugDJBot.stop();" />
+		  <menuitem label="Blacklist Current Song" oncommand="PlugDJBot.banSong();" />
+		  <menuitem label="Options" oncommand="PlugDJBot.openPreferences();" />
+		</menupopup>
+	</toolbarbutton>
+  </toolbarpalette>
+</overlay>
